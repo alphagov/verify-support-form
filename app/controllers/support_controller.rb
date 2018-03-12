@@ -22,7 +22,7 @@ class SupportController < ApplicationController
   end
 
   def create
-  @support = Support.new(support_params)
+    @support = Support.new(support_params)
 
     if @support.valid?
       #@zendesk_service = ZendeskFeedback.new
@@ -30,13 +30,12 @@ class SupportController < ApplicationController
       redirect_to support_thanks_path
     else
       flash[:errors] = @support.errors
-      if params[:subject] == "problem"
+      if params[:support][:subject] == "problem"
         render :problem
       else
         render :question
       end
     end
-
   end
 
 private

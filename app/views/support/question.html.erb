@@ -4,10 +4,10 @@
     <fieldset>
 
       <legend>
-        <h1 class="heading-medium">Ask a question & give feedback</h1>
+        <h1 class="heading-medium">Ask a question or give feedback</h1>
       </legend>
 
-      <%= f.hidden_field :subject, value: "[Question or Feedback]" %>
+      <%= f.hidden_field :subject, value: "question or feedback" %>
       <%= f.hidden_field :service, value: "null" %>
 
       <%= f.text_area :message, rows: 10 %>
