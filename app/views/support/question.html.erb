@@ -8,13 +8,13 @@
       </legend>
 
       <%= f.hidden_field :subject, value: "question or feedback" %>
-      <%= f.hidden_field :service, value: "null" %>
+      <%= f.hidden_field :service, value: "n/a" %>
 
       <%= f.text_area :message, rows: 10 %>
 
       <%= f.text_field :name %>
 
-      <%= f.email_field :email %>
+      <%= f.text_field :email, placeholder: "Others to be cc'd (comma-separated list of emails)" %>
 
     </fieldset>
     <br><%= f.submit "Submit", class: "button" %>

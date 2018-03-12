@@ -15,10 +15,7 @@
 
       <%= f.text_field :service %>
 
-      <%= f.email_field :email %>
-
-      <!--<label class="form-label" for="email-cc">Email of anyone you want cc'd</label>
-      <input class="form-control" id="email-cc" type="text" name="email-cc">-->
+      <%= f.text_field :email, placeholder: "Others to be cc'd (comma-separated list of emails)" %>
 
     </fieldset>
     <br><%= f.submit "Submit", class: "button" %>

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20180312114015) do
 
   create_table "supports", force: :cascade do |t|
     t.string "name"
-    t.string "email"
+    t.string "email" 
     t.string "message"
     t.string "subject"
     t.datetime "created_at", null: false
