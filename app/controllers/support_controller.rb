@@ -1,3 +1,5 @@
+require 'json'
+
 class SupportController < ApplicationController
 
   default_form_builder GovukElementsFormBuilder::FormBuilder
