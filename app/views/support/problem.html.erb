@@ -9,16 +9,11 @@
 
       <%= f.hidden_field :subject, value: "[Problem]" %>
 
-      <label class="form-label" for="textarea">
-        What do you need help with?
-      </label>
-      
       <%= f.text_area :message, rows: 10 %>
 
       <%= f.text_field :name %>
 
-      <!--<label class="form-label" for="service">Your service</label>
-      <input class="form-control" id="service" type="text" name="service">-->
+      <%= f.text_field :service %>
 
       <%= f.email_field :email %>
 

@@ -35,6 +35,9 @@ gem 'govuk_template'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_elements_rails'
 
+# Zendesk
+gem 'zendesk_api'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

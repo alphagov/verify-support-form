@@ -46,7 +46,8 @@ private
       :subject,
       :name,
       :email,
-      :message
+      :message,
+      :service
     )
   end
 

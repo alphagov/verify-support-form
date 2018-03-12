@@ -8,10 +8,7 @@
       </legend>
 
       <%= f.hidden_field :subject, value: "[Question or Feedback]" %>
-
-      <label class="form-label" for="textarea">
-        What is your question?
-      </label>
+      <%= f.hidden_field :service, value: "null" %>
 
       <%= f.text_area :message, rows: 10 %>
 
