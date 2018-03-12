@@ -1,5 +1,6 @@
 <% content_for(:page_title, 'Support') %>
-<form>
+
+<%= form_tag select_support_path do %>
   <div class="form-group">
     <fieldset>
 
@@ -8,15 +9,21 @@
       </legend>
 
       <div class="multiple-choice">
-        <input id="radio-1" type="radio" name="radio-group" value="problem">
-        <label for="radio-1">I want to report a problem</label>
+        <%= radio_button_tag :subject, :problem, checked: true %>
+        <%= label_tag :subject_problem, "I want to report a problem" %>
       </div>
       <div class="multiple-choice">
-        <input id="radio-2" type="radio" name="radio-group" value="question">
-        <label for="radio-2">I have a question</label>
+        <%= radio_button_tag :subject, :question %>
+        <%= label_tag :subject_question, "I have a question or want to give feedback" %>
       </div>
 
     </fieldset>
-    <br><input class="button button-get-started" type="submit" value="Continue">
+    <br><%= submit_tag "Continue", class: "button" %>
   </div>
-</form>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p> The Government Digital Service (GDS) maintains the platform behind registers and helps custodians to manage their registers and keep the data up-to-date. GDS provides operational support from 9am to 5pm, Monday to Friday. <p>
+    </div>
+  </div>
+<% end %>

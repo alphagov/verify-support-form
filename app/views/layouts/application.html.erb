@@ -9,14 +9,6 @@
 
 <% content_for :content do %>
   <main id="content" tabindex="-1">
-    <div class="phase-banner-alpha">
-      <p>
-        <strong class="phase-tag">ALPHA</strong>
-        <span>
-          This is a new service – your <a href="TODO">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>
     <%= content_for?(:main) ? yield(:main) : yield %>
   </main>
 <% end %>

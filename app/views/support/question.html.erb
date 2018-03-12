@@ -1,5 +1,5 @@
 <% content_for(:page_title, 'Support - Question') %>
-<form>
+<%= form_for @support, url: support_question_path  do |f| %>
   <div class="form-group">
     <fieldset>
 
@@ -7,18 +7,19 @@
         <h1 class="heading-medium">Ask a question & give feedback</h1>
       </legend>
 
+      <%= f.hidden_field :subject, value: "[Question or Feedback]" %>
+
       <label class="form-label" for="textarea">
         What is your question?
       </label>
-      <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="8"></textarea>
 
-      <label class="form-label" for="name">Your name</label>
-      <input class="form-control" id="name" type="text" name="name">
+      <%= f.text_area :message, rows: 10 %>
 
-      <label class="form-label" for="email">Your email</label>
-      <input class="form-control" id="email" type="text" name="email">
+      <%= f.text_field :name %>
+
+      <%= f.email_field :email %>
 
     </fieldset>
-    <br><input class="button button-get-started" type="submit" value="Continue">
+    <br><%= f.submit "Submit", class: "button" %>
   </div>
-</form>
+<% end %>

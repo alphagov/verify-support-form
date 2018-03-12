@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/ministryofjustice/govuk_elements_form_builder.git
+  revision: 7c6178b6f85d80a1e122776124e077aa558d30d8
+  specs:
+    govuk_elements_form_builder (1.2.0)
+      govuk_elements_rails (>= 3.0.0)
+      govuk_frontend_toolkit (>= 6.0.0)
+      rails (>= 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,6 +196,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  govuk_elements_form_builder!
   govuk_elements_rails
   govuk_frontend_toolkit
   govuk_template
