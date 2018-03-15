@@ -35,6 +35,8 @@ gem 'govuk_template'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_elements_rails'
 
+gem 'dotenv-rails'
+
 # Zendesk
 gem 'zendesk_api'
 

@@ -27,8 +27,9 @@ class SupportController < ApplicationController
     @support = Support.new(support_params)
 
     if @support.valid?
-      #@zendesk_service = ZendeskFeedback.new
-      #@response = @zendesk_service.send_feedback(support_params)
+      @zendesk_service = ZendeskFeedback.new
+      @response = @zendesk_service.send_feedback(support_params)
+      #puts "Zendesk ticket created: #{@response.ticket_id}"
       redirect_to support_thanks_path
     else
       flash[:errors] = @support.errors
@@ -48,7 +49,8 @@ private
       :name,
       :email,
       :message,
-      :service
+      :service,
+      :collaborators
     )
   end
 

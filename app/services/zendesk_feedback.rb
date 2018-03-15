@@ -3,9 +3,9 @@ require 'zendesk_api'
 class ZendeskFeedback
   def initialize
     @client = ZendeskAPI::Client.new do |config|
-      config.url = ENV['ZENDESK_URL']
-      config.username = ENV['ZENDESK_USERNAME']
-      config.token = ENV['ZENDESK_TOKEN']
+      config.url = ENV.fetch('ZENDESK_URL')
+      config.username = ENV.fetch('ZENDESK_USERNAME')
+      config.token = ENV.fetch('ZENDESK_TOKEN')
     end
   end
 
@@ -13,12 +13,19 @@ class ZendeskFeedback
     ticket = {
       subject: params[:subject],
       comment: {
-        body: params[:message]
+        body: <<~EOF
+        Message:
+        #{params[:message]}
+
+        Service:
+        #{params[:service]}
+        EOF
       },
       requester: {
         name: params[:name],
         email: params[:email]
-      }
+      },
+      collaborators: params[:collaborators]
     }
 
     response = @client.tickets.create!(ticket)
