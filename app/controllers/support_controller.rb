@@ -33,7 +33,7 @@ class SupportController < ApplicationController
       redirect_to support_thanks_path
     else
       flash[:errors] = @support.errors
-      if params[:support][:subject] == "problem"
+      if params[:support][:subject] == "Problem"
         render :problem
       else
         render :question

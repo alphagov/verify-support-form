@@ -7,7 +7,7 @@
         <h1 class="heading-medium">Report a problem</h1>
       </legend>
 
-      <%= f.hidden_field :subject, value: "problem" %>
+      <%= f.hidden_field :subject, value: "Problem" %>
 
       <%= f.text_area :message, rows: 10 %>
 
@@ -18,7 +18,6 @@
       <%= f.text_field :email %>
 
       <%= f.text_field :collaborators, placeholder: "For others to be cc'd (comma-separated list of emails)" %>
-
 
     </fieldset>
     <br><%= f.submit "Submit", class: "button" %>

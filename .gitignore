@@ -17,6 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 .env
+manifest.yml
 
 /node_modules
 /yarn-error.log

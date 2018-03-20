@@ -37,6 +37,8 @@ gem 'govuk_elements_rails'
 
 gem 'dotenv-rails'
 
+gem 'pg'
+
 # Zendesk
 gem 'zendesk_api'
 
