@@ -8,13 +8,13 @@
       </legend>
 
       <%= f.hidden_field :subject, value: "Question or Feedback" %>
-      <%= f.hidden_field :service, value: "n/a" %>
+      <%= f.hidden_field :service_name, value: "n/a" %>
 
       <%= f.text_area :message, rows: 10 %>
 
-      <%= f.text_field :name, label: 'Your name' %>
+      <%= f.text_field :your_name, label: 'Your name' %>
 
-      <%= f.text_field :email %>
+      <%= f.text_field :your_email_address %>
 
     </fieldset>
     <br><%= f.submit "Submit", class: "button" %>

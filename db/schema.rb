@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313160849) do
+ActiveRecord::Schema.define(version: 20180328090559) do
 
   create_table "supports", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "your_name"
+    t.string "your_email_address"
     t.string "message"
     t.string "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "service"
-    t.string "collaborators"
+    t.string "service_name"
+    t.string "email_addresses_of_anyone_else_you_want_to_be_copied_in"
   end
 
 end

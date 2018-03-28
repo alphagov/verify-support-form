@@ -18,14 +18,14 @@ class ZendeskFeedback
         #{params[:message]}
 
         Service:
-        #{params[:service]}
+        #{params[:service_name]}
         EOF
       },
       requester: {
-        name: params[:name],
-        email: params[:email]
+        name: params[:your_name],
+        email: params[:your_email_address]
       },
-      collaborators: params[:collaborators]
+      collaborators: params[:email_addresses_of_anyone_else_you_want_to_be_copied_in]
     }
 
     response = @client.tickets.create!(ticket)

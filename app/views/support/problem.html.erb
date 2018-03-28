@@ -11,15 +11,22 @@
 
       <%= f.text_area :message, rows: 10 %>
 
-      <%= f.text_field :name %>
+      <%= f.text_field :your_name %>
 
-      <%= f.text_field :service %>
+      <%= f.text_field :service_name %>
 
-      <%= f.text_field :email %>
+      <%= f.text_field :your_email_address %>
 
-      <%= f.text_field :collaborators, placeholder: "For others to be cc'd (comma-separated list of emails)" %>
-
+      <%= f.text_field :email_addresses_of_anyone_else_you_want_to_be_copied_in %>
+      <details>
+        <summary><span class="summary">More information</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            Separate email addresses with commas.
+          </p>
+        </div>
+      </details>
     </fieldset>
-    <br><%= f.submit "Submit", class: "button" %>
+    <br><br><%= f.submit "Submit", class: "button" %>
   </div>
 <% end %>

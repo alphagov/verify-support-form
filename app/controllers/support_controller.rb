@@ -46,11 +46,11 @@ private
   def support_params
     params.require(:support).permit(
       :subject,
-      :name,
-      :email,
+      :your_name,
+      :your_email_address,
       :message,
-      :service,
-      :collaborators
+      :service_name,
+      :email_addresses_of_anyone_else_you_want_to_be_copied_in
     )
   end
 
