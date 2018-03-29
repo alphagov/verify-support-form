@@ -18,15 +18,8 @@
       <%= f.text_field :your_email_address %>
 
       <%= f.text_field :email_addresses_of_anyone_else_you_want_to_be_copied_in %>
-      <details>
-        <summary><span class="summary">More information</span></summary>
-        <div class="panel panel-border-narrow">
-          <p>
-            Separate email addresses with commas.
-          </p>
-        </div>
-      </details>
+
     </fieldset>
-    <br><br><%= f.submit "Submit", class: "button" %>
+    <br><%= f.submit "Submit", class: "button" %>
   </div>
 <% end %>

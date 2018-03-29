@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+    label:
+      support:
+        email_addresses_of_anyone_else_you_want_to_be_copied_in:
+    hint:
+      support:
+        email_addresses_of_anyone_else_you_want_to_be_copied_in: Separate email addresses with commas.
