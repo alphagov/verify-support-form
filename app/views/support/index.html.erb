@@ -1,25 +1,25 @@
-<% content_for(:page_title, 'Support') %>
+<% content_for(:page_title, 'Verify Support') %>
 
-<h1 class="heading-large">Support</h1>
+<h1 class='heading-large'>Verify Support</h1>
 
 <%= form_tag select_support_path do %>
-  <div class="form-group">
+  <div class='form-group'>
     <fieldset>
 
       <legend>
-        <h1 class="heading-medium">How can we help you?</h1>
+        <h1 class='heading-medium'>How can we help you?</h1>
       </legend>
 
-      <div class="multiple-choice">
-        <%= radio_button_tag :subject, :problem, checked: true %>
-        <%= label_tag :subject_problem, "I want to report a problem" %>
+      <div class='multiple-choice'>
+        <%= radio_button_tag :select_subject, :problem, checked: true %>
+        <%= label_tag :subject_problem, 'I want to report a problem' %>
       </div>
-      <div class="multiple-choice">
-        <%= radio_button_tag :subject, :question %>
-        <%= label_tag :subject_question, "I have a question or want to give feedback" %>
+      <div class='multiple-choice'>
+        <%= radio_button_tag :select_subject, :question %>
+        <%= label_tag :subject_question, 'I have a question or want to give feedback' %>
       </div>
 
     </fieldset>
-    <br><%= submit_tag "Continue", class: "button" %>
+    <br><%= submit_tag 'Continue', class: 'button' %>
   </div>
 <% end %>

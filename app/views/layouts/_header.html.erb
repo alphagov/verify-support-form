@@ -1,23 +1,23 @@
 <% @omit_header = true %>
 <% content_for :after_header do %>
-  <div class="header">
-    <div class="header__container">
-      <div class="header__brand">
+  <div class='header'>
+    <div class='header__container'>
+      <div class='header__brand'>
         <%= link_to 'https://govuk-verify.cloudapps.digital/' do %>
-          <span class="govuk-logo">
+          <span class='govuk-logo'>
             <%= image_tag 'gov_uk_logotype_crown_invert_trans.png', height: 32, width: 36, class: 'govuk-logo__printable-crown' %>
             GOV.UK
           </span>
-          <span class="header__title">Verify</span>
+          <span class='header__title'>Verify</span>
         <% end %>
       </div>
-      <%= check_box_tag 'show-menu', nil, false, class: 'header__navigation-toggle-checkbox', "aria-controls" => "navigation", "aria-expanded" => "false" %>
+      <%= check_box_tag 'show-menu', nil, false, class: 'header__navigation-toggle-checkbox', 'aria-controls' => 'navigation', 'aria-expanded' => 'false' %>
       <%= label_tag 'show-menu', 'Menu', class: 'header__navigation-toggle' %>
-      <nav class="header__navigation">
+      <nav class='header__navigation'>
         <ul>
-          <li><a href="https://govuk-verify.cloudapps.digital/get-started-check-verify-is-right/">Get Started</a></li>
-          <li><a href="http://alphagov.github.io/identity-assurance-documentation/">Documentation</a></li>
-          <li><a href="https://govuk-verify.cloudapps.digital/support/">Support</a></li>
+          <li><a href='https://govuk-verify.cloudapps.digital/get-started-check-verify-is-right/'>Get Started</a></li>
+          <li><a href='http://alphagov.github.io/identity-assurance-documentation/'>Documentation</a></li>
+          <li><a href='https://govuk-verify.cloudapps.digital/support/'>Support</a></li>
       </nav>
     </div>
   </div>

@@ -1,13 +1,14 @@
-<% content_for(:page_title, 'Support - Problem') %>
+<% content_for(:page_title, 'Verify Support - Problem') %>
+
+<legend>
+  <h1 class='heading-large'>Report a problem</h1>
+</legend>
+
 <%= form_for @support, url: support_problem_path  do |f| %>
-  <div class="form-group">
+  <div class='form-group'>
     <fieldset>
 
-      <legend>
-        <h1 class="heading-medium">Report a problem</h1>
-      </legend>
-
-      <%= f.hidden_field :subject, value: "Verify Support - Problem" %>
+      <%= f.hidden_field :subject, value: 'Verify Support - Problem' %>
 
       <%= f.text_area :message, rows: 10 %>
 
@@ -20,6 +21,6 @@
       <%= f.text_field :email_addresses_of_anyone_else_you_want_to_be_copied_in %>
 
     </fieldset>
-    <br><%= f.submit "Submit", class: "button" %>
+    <br><%= f.submit 'Submit', class: 'button' %>
   </div>
 <% end %>

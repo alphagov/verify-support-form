@@ -8,7 +8,7 @@ class SupportController < ApplicationController
   end
 
   def select_support
-    if params[:subject] == "problem"
+    if params[:select_subject] == 'problem'
       redirect_to support_problem_path
     else
       redirect_to support_question_path
@@ -33,7 +33,7 @@ class SupportController < ApplicationController
       redirect_to support_thanks_path
     else
       flash[:errors] = @support.errors
-      if params[:support][:subject] == "Problem"
+      if params[:support][:subject] == 'Verify Support - Problem'
         render :problem
       else
         render :question
