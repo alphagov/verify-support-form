@@ -37,7 +37,6 @@ class ZendeskFeedback
       }})
     end
 
-
     response = @client.tickets.create!(ticket)
 
     { success: true, ticket_id: response.id }
