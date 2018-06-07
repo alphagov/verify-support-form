@@ -1,22 +1,22 @@
 <% content_for(:page_title, 'Verify Support') %>
 
-<h1 class='heading-large'>Verify Support</h1>
+<h1 class='heading-large'>Contact the GOV.UK Verify support team</h1>
 
 <%= form_tag select_support_path do %>
   <div class='form-group'>
     <fieldset>
 
       <legend>
-        <h1 class='heading-medium'>How can we help you?</h1>
+        <h1 class='heading-medium'>What do you want to do?</h1>
       </legend>
 
       <div class='multiple-choice'>
         <%= radio_button_tag :select_subject, :problem, checked: true %>
-        <%= label_tag :subject_problem, 'I want to report a problem' %>
+        <%= label_tag :subject_problem, 'Report a problem' %>
       </div>
       <div class='multiple-choice'>
         <%= radio_button_tag :select_subject, :question %>
-        <%= label_tag :subject_question, 'I have a question or want to give feedback' %>
+        <%= label_tag :subject_question, 'Ask a question or give feedback' %>
       </div>
 
     </fieldset>
