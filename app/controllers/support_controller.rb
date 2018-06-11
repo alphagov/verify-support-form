@@ -9,9 +9,9 @@ class SupportController < ApplicationController
 
   def select_support
     if params[:select_subject] == 'problem'
-      redirect_to support_problem_path
+      redirect_to '/problem'
     else
-      redirect_to support_question_path
+      redirect_to '/question'
     end
   end
 
@@ -30,7 +30,7 @@ class SupportController < ApplicationController
       @zendesk_service = ZendeskFeedback.new
       @response = @zendesk_service.send_feedback(support_params)
       #puts "Zendesk ticket created: #{@response.ticket_id}"
-      redirect_to support_thanks_path
+      redirect_to '/thanks'
     else
       flash[:errors] = @support.errors
       if params[:support][:subject] == 'Verify Support - Problem'

@@ -1,25 +1,41 @@
 <% content_for(:page_title, 'Verify Support') %>
+<div class="container">
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-<h1 class='heading-large'>Contact the GOV.UK Verify support team</h1>
+      <h1 class='heading-xlarge'>Support</h1>
+      <p>GOV.UK Verify is supported 24 hours a day, 7 days a week by a full-time team at Government Digital Service.</p>
+      <p><a href="https://verifystatus.digital.cabinet-office.gov.uk">Check if any incidents have been reported</a> before you contact the GOV.UK Verify team. You can sign up to get notifications when incidents are reported or updated.</p>
 
-<%= form_tag select_support_path do %>
-  <div class='form-group'>
-    <fieldset>
+      <%= form_tag select_support_path do %>
+        <div class='form-group'>
+          <fieldset>
 
-      <legend>
-        <h1 class='heading-medium'>What do you want to do?</h1>
-      </legend>
+            <legend>
+              <h1 class='heading-medium'>What do you want to do?</h1>
+            </legend>
 
-      <div class='multiple-choice'>
-        <%= radio_button_tag :select_subject, :problem, checked: true %>
-        <%= label_tag :subject_problem, 'Report a problem' %>
-      </div>
-      <div class='multiple-choice'>
-        <%= radio_button_tag :select_subject, :question %>
-        <%= label_tag :subject_question, 'Ask a question or give feedback' %>
-      </div>
+            <div class='multiple-choice'>
+              <%= radio_button_tag :select_subject, :problem, checked: true %>
+              <%= label_tag :subject_problem, 'Report a problem' %>
+            </div>
+            <div class='multiple-choice'>
+              <%= radio_button_tag :select_subject, :question %>
+              <%= label_tag :subject_question, 'Ask a question or give feedback' %>
+            </div>
 
-    </fieldset>
-    <br><%= submit_tag 'Continue', class: 'button' %>
+          </fieldset>
+          <br><%= submit_tag 'Continue', class: 'button' %>
+        </div>
+      <% end %>
+
+      <p>We'll reply by the next working day.</p>
+      <p>If it's an emergency, we'll reply within 20 minutes and send you updates every hour until the problem is fixed.</p>
+      <p>It's an emergency if:</p>
+      <ul class="list list-bullet">
+        <li>a significant number of users can’t verify themselves to use your service</li>
+        <li>you think there’s been a security breach</li>
+      </ul>
+    </div>
   </div>
-<% end %>
+</div>

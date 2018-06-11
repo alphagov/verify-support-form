@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe 'The problem form' do
 
   it 'should visit problem form when problem is selected' do
-    visit '/support'
+    visit '/'
     choose 'select_subject_problem'
     click_button 'Continue'
     expect(page).to have_content('Report a problem')
   end
 
   it 'should show errors for required fields' do
-    visit '/support/problem'
+    visit '/problem'
     click_button 'Submit'
     expect(page).to have_content "Message can't be blank"
     expect(page).to have_content "Your name can't be blank"
@@ -19,7 +19,7 @@ RSpec.describe 'The problem form' do
   end
 
   it 'should maintain the input values after validation fails' do
-    visit '/support/problem'
+    visit '/problem'
     fill_in('Message', with: 'Example message')
     fill_in('Your name', with: '') #maintain input values when another field is missing content
     fill_in('Service name', with: 'Example service')
@@ -33,8 +33,8 @@ RSpec.describe 'The problem form' do
     expect(find_field(id: 'support_your_email_address').value).to eq('example@example.com')
   end
 
-  def submit_valid_form
-    visit '/support/problem'
+  def submit_valid_problem_form
+    visit '/problem'
     fill_in('Message', with: 'Example message')
     fill_in('Your name', with: 'Example name')
     fill_in('Service name', with: 'http://example.com/msa')

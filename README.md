@@ -1,24 +1,28 @@
-# README
+# Verify Support Form
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A form for allowing users to ask a question / give feedback or report a problem.
 
-Things you may want to cover:
+## Installing the application
 
-* Ruby version
+Once you’ve cloned this then run the following commands to install the requirements.
 
-* System dependencies
+```
+bundle install
+rails db:migrate
+```
 
-* Configuration
+## Running the application
 
-* Database creation
+Prepare the application configuration:
 
-* Database initialization
+```
+cp .env-example .env
+vim .env
+```
 
-* How to run the test suite
+You can run the application with:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rails server
+open http://localhost:3000
+```
