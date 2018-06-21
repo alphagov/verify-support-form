@@ -16,9 +16,6 @@ class ZendeskFeedback
         body: <<~EOF
         Message:
         #{params[:message]}
-
-        Service:
-        #{params[:service_name]}
         EOF
       },
       requester: {
@@ -27,6 +24,18 @@ class ZendeskFeedback
       },
       collaborators: params[:email_addresses_of_anyone_else_you_want_to_be_copied_in]
     }
+
+    if params[:subject] == 'Verify Support - Problem'
+      ticket.merge!({comment: {
+        body: <<~EOF
+        Message:
+        #{params[:message]}
+
+        Service:
+        #{params[:service_name]}
+        EOF
+      }})
+    end
 
     response = @client.tickets.create!(ticket)
 

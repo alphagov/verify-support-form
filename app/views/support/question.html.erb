@@ -1,14 +1,14 @@
-<% content_for(:page_title, 'Support - Question') %>
+<% content_for(:page_title, 'Verify Support - Question or Feedback') %>
+
+<legend>
+  <h1 class='heading-large'>Ask a question or give feedback</h1>
+</legend>
+
 <%= form_for @support, url: support_question_path  do |f| %>
-  <div class="form-group">
+  <div class='form-group'>
     <fieldset>
 
-      <legend>
-        <h1 class="heading-medium">Ask a question or give feedback</h1>
-      </legend>
-
-      <%= f.hidden_field :subject, value: "Question or Feedback" %>
-      <%= f.hidden_field :service_name, value: "n/a" %>
+      <%= f.hidden_field :subject, value: 'Verify Support - Question or Feedback' %>
 
       <%= f.text_area :message, rows: 10 %>
 
@@ -17,6 +17,6 @@
       <%= f.text_field :your_email_address %>
 
     </fieldset>
-    <br><%= f.submit "Submit", class: "button" %>
+    <br><%= f.submit 'Submit', class: 'button' %>
   </div>
 <% end %>

@@ -4,5 +4,11 @@ class Support < ApplicationRecord
   validates_format_of :email_addresses_of_anyone_else_you_want_to_be_copied_in, :allow_blank => true, :with => /(\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})(,\s*([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,}))*\z)/i
   validates_format_of :your_email_address, :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates_presence_of :your_email_address, :your_name, :message, :service_name
+  validates_presence_of :your_email_address, :your_name, :message
+  validates_presence_of :service_name, if: :validate_subject
+
+  def validate_subject
+    subject == 'Verify Support - Problem'
+  end
+
 end
